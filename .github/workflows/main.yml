@@ -13,4 +13,4 @@ jobs:
       uses: parallelwindfarms/docker-tests@develop
     - name: Test installation
       id: test
-      run: source /opt/OpenFOAM/setImage_v1906.sh && blockMesh -help
+      run: ls && cd data/ && ls
