@@ -9,12 +9,14 @@ jobs:
     - name: Install tree
       id: tree
       run: yum install -y tree
+    - name: Clone from git
+      id: clone
+      run: git clone git@github.com:parallelwindfarms/data-test.git
     - name: Take a look
       id: look
       run: tree -L 2
     - name: Activate OpenFOAM
       id: activate
-      run: source /opt/OpenFOAM/setImage_v1906.sh && blockMesh -help
-    - name: Check activation
-      id: check
-      run: blockMesh -help
+      run: |
+        source /opt/OpenFOAM/setImage_v1906.sh
+        blockMesh -help
