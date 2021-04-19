@@ -20,4 +20,4 @@ jobs:
       run: tree -L 2
     - name: Use OpenFOAM
       id: openfoam
-      run: source wf/run.sh
+      run: wf/run.sh
