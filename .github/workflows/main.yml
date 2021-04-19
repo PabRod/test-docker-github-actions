@@ -5,12 +5,9 @@ jobs:
     runs-on: ubuntu-latest
     name: A job to test OpenFOAM
     steps:
-    - name: Checkout
-      id: checkout
-      uses: actions/checkout@v2
     - name: OpenFOAM action step
       id: openfoam
       uses: parallelwindfarms/docker-tests@develop
     - name: Test installation
       id: test
-      run: ls && cd data/ && ls
+      run: ls && cd / && ls
