@@ -11,3 +11,6 @@ jobs:
     - name: OpenFOAM action step
       id: openfoam
       uses: parallelwindfarms/docker-tests@develop
+    - name: Test installation
+      id: test
+      run: blockMesh -help
