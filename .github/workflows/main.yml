@@ -20,8 +20,4 @@ jobs:
       run: tree -L 2
     - name: Use OpenFOAM
       id: openfoam
-      run: |
-        source /opt/OpenFOAM/setImage_v1906.sh
-        cd wf/data/cavity
-        blockMesh
-        icoFoam
+      run: source /wf/run.sh
