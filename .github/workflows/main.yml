@@ -17,4 +17,4 @@ jobs:
       run: tree -L 2
     - name: Use OpenFOAM
       id: openfoam
-      run: run.sh
+      run: ./run.sh
