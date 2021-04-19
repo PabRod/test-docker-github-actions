@@ -2,6 +2,6 @@
 
 source /opt/OpenFOAM/setImage_v1906.sh
 
-cd wf/data/cavity
+cd data/cavity
 blockMesh
 icoFoam
