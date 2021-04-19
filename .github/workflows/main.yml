@@ -14,12 +14,10 @@ jobs:
       run: yum -y install git
     - name: Clone from git
       id: clone
-      run: git clone https://github.com/parallelwindfarms/data-test.git
+      run: git clone https://github.com/parallelwindfarms/data-test.git wf
     - name: Take a look
       id: look
       run: tree -L 2
     - name: Activate OpenFOAM
       id: activate
-      run: |
-        source /opt/OpenFOAM/setImage_v1906.sh \
-        blockMesh -help
+      run: source /opt/OpenFOAM/setImage_v1906.sh && blockMesh -help
